@@ -1,5 +1,8 @@
 package br.com.vinicius.crudgestores.models;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import javax.persistence.*;
 
 @Entity
@@ -42,7 +45,8 @@ public class Gestor {
 	}
 
 	public String getNascimento() {
-		return nascimento;
+		SimpleDateFormat sdf = new SimpleDateFormat();
+		return sdf.format(new Date());
 	}
 
 	public void setNascimento(String nascimento) {
