@@ -1,9 +1,9 @@
 package br.com.vinicius.crudgestores.models;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class Gestor {
@@ -45,8 +45,7 @@ public class Gestor {
 	}
 
 	public String getNascimento() {
-		SimpleDateFormat sdf = new SimpleDateFormat();
-		return sdf.format(new Date());
+		return nascimento;
 	}
 
 	public void setNascimento(String nascimento) {
